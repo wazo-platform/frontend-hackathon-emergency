@@ -1,0 +1,42 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "airbnb",
+    "prettier"
+  ],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    // Soft some rules.
+    "max-len": ["error", 120],
+    "no-bitwise": 0,
+    "no-unused-expressions": 0, // Allow one-line expressions
+    "no-plusplus": 0, // We know how to use unary operators
+    "no-extra-boolean-cast": 0, // Sometimes we need to cast booleans
+    "no-continue": 0, // We want to continue
+    "global-require": 0, // Used by webpack-isomorphic-tools and React Native.
+    "jsx-a11y/href-no-hash": 0, // Allow # in links
+    "no-restricted-syntax": 0, // We want to use for in
+    "no-prototype-builtins": 0, // We want to use hasOwnProperty
+    "import/first": 0, // Este sorts by atom/sort-lines natural order.
+    "import/no-duplicates": 2,
+    "no-underscore-dangle": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "import/prefer-default-export": 0, // No. Actions can have just one action.
+    "jsx-a11y/anchor-has-content": 0, // Doesn't work with new components.
+    "jsx-a11y/html-has-lang": 0, // Can't recognize the Helmet.
+    "no-confusing-arrow": 0, // This rule is super confusing.
+    "no-duplicate-imports": 0, // github.com/babel/eslint-plugin-babel/issues/59#issuecomment-230118848
+    "no-nested-ternary": 0, // It's nice for JSX.
+    "no-param-reassign": 0, // We love param reassignment. Naming is hard.
+    "no-shadow": 0, // Shadowing is a nice language feature. Naming is hard.
+    "react/no-render-return-value": 0,
+    "react/jsx-filename-extension": 0, // No, JSX belongs to .js files
+    "react/jsx-indent": 0, // Damn. We need Yarn asap.
+    "react/prop-types": 0, // Can't detect flowtype correctly.
+    "react/no-array-index-key": 0,
+    "react/require-default-props": 0
+  }
+}
