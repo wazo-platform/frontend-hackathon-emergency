@@ -1,5 +1,7 @@
 Hackathon
 
+![Connection Service](static/screen.png)
+
 # Installation
 
 ```sh
